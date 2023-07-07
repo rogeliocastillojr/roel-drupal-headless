@@ -1,7 +1,7 @@
 import { getPaths } from '../lib/getPaths';
 import { globalDrupalStateStores } from '../lib/stores';
 
-import umamiPaths from './data/umamiPaths.json';
+import defaultProfilePaths from './data/defaultProfilePaths.json';
 
 describe('getPaths()', () => {
 	const mockContext = {
@@ -16,9 +16,8 @@ describe('getPaths()', () => {
 			'articles',
 			false,
 		);
-
-		expect(paths).toEqual(umamiPaths);
 		
+		expect(paths).toEqual(defaultProfilePaths);
 	});
 	it('should return an empty array if failGracefully is true', async () => {
 		const paths = await getPaths(

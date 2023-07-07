@@ -4,8 +4,6 @@ import ArticleTemplate from '../../pages/articles/[...slug]';
 
 import defaultProfileArticlesData from '../data/defaultProfileArticlesData.json';
 import defaultProfileFooterMenu from '../data/defaultProfileMenuItemsMainData.json';
-import umamiEnArticlesData from '../data/umamiEnArticlesData.json';
-import umamiFooterMenu from '../data/umamiMenuItemsMainData.json';
 
 vi.mock('next/image');
 vi.mock('next/router', () => ({
@@ -19,9 +17,12 @@ vi.mock('next/router', () => ({
  */
 
 describe('<SSRArticlesListTemplate />', () => {
-	it(`should render articles`, () => {
-		const data = { articles: umamiEnArticlesData, footerMenu: umamiFooterMenu }
-		
+	it('should render articles', () => {
+		const data = {
+						articles: defaultProfileArticlesData,
+						footerMenu: defaultProfileFooterMenu,
+				  };
+
 		const { asFragment } = render(
 			<SSRArticlesListTemplate
 				sortedArticles={data.articles}
@@ -32,8 +33,11 @@ describe('<SSRArticlesListTemplate />', () => {
 	});
 });
 describe('<ArticleTemplate />', () => {
-	it(`should render articles`, () => {
-		const data = { article: umamiEnArticlesData[0], footerMenu: umamiFooterMenu }
+	it('should render articles', () => {
+		const data = {
+						article: defaultProfileArticlesData[0],
+						footerMenu: defaultProfileFooterMenu,
+				  };
 
 		const { asFragment } = render(
 			<ArticleTemplate article={data.article} footerMenu={data.footerMenu} />,

@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig(() => {
-	const locales = `\['en', 'es'\]`;
+	const locales = `\['en'\]`;
 	return {
 		test: {
 			globals: true,
@@ -22,11 +22,11 @@ export default defineConfig(() => {
 		plugins: [react()],
 		define: {
 			// Mock environment variables
-			'process.env.backendUrl': JSON.stringify('https://umami'),
-			'process.env.BACKEND_URL': JSON.stringify('https://umami'),
+			'process.env.backendUrl': JSON.stringify('https://default'),
+			'process.env.BACKEND_URL': JSON.stringify('https://default'),
 			'process.env.locales': locales,
-			'process.env.CLIENT_ID': JSON.stringify('umami_client_id'),
-			'process.env.CLIENT_SECRET': JSON.stringify('umami_client_secret'),
+			'process.env.CLIENT_ID': JSON.stringify('default_client_id'),
+			'process.env.CLIENT_SECRET': JSON.stringify('default_client_secret'),
 		},
 	};
 });

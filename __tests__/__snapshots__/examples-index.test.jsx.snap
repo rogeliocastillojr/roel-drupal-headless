@@ -1,6 +1,6 @@
 // Vitest Snapshot v1
 
-exports[`Umami <ExamplesPageTemplate /> > should render 1`] = `
+exports[`<ExamplesPageTemplate /> > should render the examples page 1`] = `
 <DocumentFragment>
   <div
     class="min-h-screen max-h-screen min-w-screen max-w-screen flex flex-col overflow-x-hidden"
@@ -120,29 +120,9 @@ exports[`Umami <ExamplesPageTemplate /> > should render 1`] = `
           >
             <a
               class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
-              href="/en"
+              href="/"
             >
               Home
-            </a>
-          </li>
-          <li
-            class="ps-list-disc ps-text-blue-300"
-          >
-            <a
-              class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
-              href="/en/articles"
-            >
-              Articles
-            </a>
-          </li>
-          <li
-            class="ps-list-disc ps-text-blue-300"
-          >
-            <a
-              class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
-              href="/en/recipes"
-            >
-              Recipes
             </a>
           </li>
         </ul>
