@@ -1,3 +1,5 @@
+import styles from './layout.module.css'
+
 import { Footer, Header, PreviewRibbon } from '@pantheon-systems/nextjs-kit';
 
 export default function Layout({ children, footerMenu, preview = false }) {
@@ -17,7 +19,7 @@ export default function Layout({ children, footerMenu, preview = false }) {
 		<div className="min-h-screen max-h-screen min-w-screen max-w-screen flex flex-col overflow-x-hidden">
 			{preview && <PreviewRibbon />}
 			<Header navItems={navItems} />
-			<main className="mb-auto">{children}</main>
+			<main className={styles["mb-auto"] + " " + styles.page} >{children}</main>
 			<Footer footerMenuItems={footerMenuItems}>
 				<span className="mx-auto">
 					© {new Date().getFullYear()} Built with{' '}

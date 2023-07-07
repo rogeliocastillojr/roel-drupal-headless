@@ -110,29 +110,9 @@ exports[`<AuthApiExampleTemplate /> > should render a failure message if unauthe
           >
             <a
               class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
-              href="/en"
+              href="/"
             >
               Home
-            </a>
-          </li>
-          <li
-            class="ps-list-disc ps-text-blue-300"
-          >
-            <a
-              class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
-              href="/en/articles"
-            >
-              Articles
-            </a>
-          </li>
-          <li
-            class="ps-list-disc ps-text-blue-300"
-          >
-            <a
-              class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
-              href="/en/recipes"
-            >
-              Recipes
             </a>
           </li>
         </ul>
@@ -258,29 +238,9 @@ exports[`<AuthApiExampleTemplate /> > should render a success message if authent
           >
             <a
               class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
-              href="/en"
+              href="/"
             >
               Home
-            </a>
-          </li>
-          <li
-            class="ps-list-disc ps-text-blue-300"
-          >
-            <a
-              class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
-              href="/en/articles"
-            >
-              Articles
-            </a>
-          </li>
-          <li
-            class="ps-list-disc ps-text-blue-300"
-          >
-            <a
-              class="ps-text-blue-300 hover:ps-underline hover:ps-text-blue-100 focus:ps-text-purple-600 active:ps-text-purple-300"
-              href="/en/recipes"
-            >
-              Recipes
             </a>
           </li>
         </ul>

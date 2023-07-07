@@ -2,20 +2,18 @@ import { render } from '@testing-library/react';
 import AuthApiExampleTemplate from '../../pages/examples/auth-api';
 
 import defaultProfileArticlesData from '../data/defaultProfileArticlesData.json';
-import umamiFooterMenu from '../data/umamiMenuItemsMainData.json';
+import defaultProfileFooterMenu from '../data/defaultProfileMenuItemsMainData.json';
 
 /**
  * @vitest-environment jsdom
  */
 
 describe('<AuthApiExampleTemplate />', () => {
-	const footerMenu = umamiFooterMenu;
+	const footerMenu = defaultProfileFooterMenu;
 	it('should render a success message if authenticated', () => {
 		const { asFragment } = render(
 			<AuthApiExampleTemplate
 				footerMenu={footerMenu}
-				// using default articles for both profiles as the content
-				// does not matter here.
 				articles={defaultProfileArticlesData}
 			/>,
 		);

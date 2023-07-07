@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import ExamplesPageTemplate from '../../pages/examples/index';
 
-import umamiFooterMenu from '../data/umamiMenuItemsMainData.json';
+import defaultProfileFooterMenu from '../data/defaultProfileMenuItemsMainData.json';
 
 vi.mock('next/image');
 vi.mock('next/router', () => ({
@@ -14,9 +14,11 @@ vi.mock('next/router', () => ({
  * @vitest-environment jsdom
  */
 
-describe(`Umami <ExamplesPageTemplate />`, () => {
-	it(`should render`, () => {
-		const data ={ footerMenu: umamiFooterMenu }
+describe('<ExamplesPageTemplate />', () => {
+	it('should render the examples page', () => {
+		const data = {
+						footerMenu: defaultProfileFooterMenu,
+				  };
 
 		const { asFragment } = render(
 			<ExamplesPageTemplate footerMenu={data.footerMenu} />,

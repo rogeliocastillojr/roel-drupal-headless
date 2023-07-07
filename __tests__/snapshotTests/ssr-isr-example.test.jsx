@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import SSGISRExampleTemplate from '../../pages/examples/ssg-isr';
 
-import umamiEnArticlesData from '../data/umamiEnArticlesData.json';
-import umamiFooterMenu from '../data/umamiMenuItemsMainData.json';
+import defaultProfileArticlesData from '../data/defaultProfileArticlesData.json';
+import defaultProfileFooterMenu from '../data/defaultProfileMenuItemsMainData.json';
 
 vi.mock('next/image');
 vi.mock('next/router', () => ({
@@ -17,7 +17,10 @@ vi.mock('next/router', () => ({
 
 describe('<SSGISRExampleTemplate />', () => {
 	it(`should render articles`, () => {
-		const data = { articles: umamiEnArticlesData, footerMenu: umamiFooterMenu }
+		const data = {
+						articles: defaultProfileArticlesData,
+						footerMenu: defaultProfileFooterMenu,
+				  };
 
 		const { asFragment } = render(
 			<SSGISRExampleTemplate

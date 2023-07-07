@@ -6,7 +6,7 @@ import { IMAGE_URL } from '../lib/constants';
 
 import Link from 'next/link';
 import Layout from '../components/layout';
-import { ContentWithImage, Recipe } from '@pantheon-systems/nextjs-kit';
+import { ContentWithImage } from '@pantheon-systems/nextjs-kit';
 
 export default function CatchAllRoute({
 	pageData,
@@ -61,35 +61,6 @@ export default function CatchAllRoute({
 			);
 		}
 
-		if (pageData.type === 'node--recipe') {
-			const {
-				title,
-				field_recipe_category,
-				field_media_image,
-				field_ingredients,
-				field_recipe_instruction,
-				thumbnail,
-			} = pageData;
-
-			const imgSrc = field_media_image?.field_media_image?.uri.url;
-			return (
-				<Recipe
-					title={title}
-					category={field_recipe_category[0].name}
-					imageProps={
-						imgSrc
-							? {
-									src: IMAGE_URL + imgSrc,
-									alt: thumbnail?.resourceIdObjMeta?.alt,
-								}
-							: undefined
-					}
-					ingredients={field_ingredients}
-					instructions={field_recipe_instruction.value}
-				/>
-			);
-		}
-
 		return (
 			<>
 				<h2 className="text-xl text-center mt-14">No content found 🏜</h2>
@@ -140,9 +111,7 @@ export async function getServerSideProps(context) {
 
 		// determine params from the resourceName
 		const params =
-			resourceName === 'node--recipe'
-				? 'include=field_media_image.field_media_image,field_recipe_category'
-				: resourceName === 'node--article'
+			resourceName === 'node--article'
 				? 'include=field_media_image.field_media_image'
 				: '';
 		const previewParams =
